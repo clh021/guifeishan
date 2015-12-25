@@ -1,1 +1,15 @@
 /* Empty. Add your own CSS if you like */
+.bar.bar-stable,.bar.bar-stable .title {
+	background-color: #FF6600;
+	color: #fff;
+}
+.tabs-icon-top > .tabs .tab-item{
+	font-size: 17px;
+	color: #000;
+	line-height: 48px;
+}
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active{
+	color: #FF6600;
+	line-height: 48px;
+	vertical-align: text-bottom;
+}

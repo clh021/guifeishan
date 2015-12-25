@@ -44,7 +44,7 @@ console.log('config urlrouter');
   .state('tab.main', {
     url: '/main',
     views: {
-      '膳食': {
+      'tab-main': {
         templateUrl: 'templates/tab-main.html',
         controller: 'MainCtrl'
       }
@@ -53,7 +53,7 @@ console.log('config urlrouter');
   .state('tab.order', {
     url: '/order',
     views: {
-      '订单': {
+      'tab-order': {
         templateUrl: 'templates/tab-order.html',
         controller: 'OrderCtrl'
       }
@@ -62,53 +62,15 @@ console.log('config urlrouter');
   .state('tab.my', {
     url: '/my',
     views: {
-      '我的': {
+      'tab-my': {
         templateUrl: 'templates/tab-my.html',
         controller: 'MyCtrl'
       }
     }
-  })
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
-    }
-  })
-
-  .state('tab.chats', {
-      url: '/chats',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
-      }
-    }
   });
-console.log('urlRouterProvider otherwise /main');
+console.log('urlRouterProvider otherwise /tab/main');
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/main');
+  $urlRouterProvider.otherwise('/tab/main');
 
 });
 
