@@ -1,15 +1,24 @@
 <ion-view view-title="膳食">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
-
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
+      <ion-item ng-repeat="(classname,foods) in foodmenus" type="item-text-wrap">
+      <table>
+        <tr>
+          <td class="classname">{{ classname }}</td>
+          <td>
+            <ion-item ng-repeat="food in foods" type="item-text-wrap">
+            <table>
+              <tr>
+                <td class="foodpic"><img src="{{ food.img }}" /><br />{{ food.name }}</td>
+                <td class="checktd">
+                  <div ng-repeat="(childtype,childprice) in food.children" class="check">{{childtype ? childtype+'：' : '' }}¥{{childprice}}元/份 <img src="img/jia.png" /> <label name="{{ food.name }}">1</label> <img src="img/jian.png"></div>
+                </td>
+              </tr>
+            </table>
+            </ion-item>
+          </td>
+        </tr>
+      </table>
       </ion-item>
     </ion-list>
   </ion-content>
