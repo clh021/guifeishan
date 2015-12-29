@@ -60,12 +60,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-  .state('tab.maindetail', {
-    url: '/main/:id',
+  .state('tab.mainnext', {
+    url: '/main/next',
     views: {
       'tab-main': {
-        templateUrl: 'templates/main-detail.html',
-        controller: 'MainDetailCtrl'
+        templateUrl: 'templates/tab-main-next.html',
+        controller: 'MainNextCtrl'
       }
     }
   })
@@ -89,5 +89,4 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/main');
-
 });

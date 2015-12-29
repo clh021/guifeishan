@@ -1,8 +1,8 @@
 angular.module('starter.controllers', [])
-.controller('DashCtrl', function($scope) {})
-.controller('MainCtrl2', function($scope, $http) {
-    $http.get("1.test5.php")
-    .success(function(response) {$scope.names = response.records;});
+.controller('OrderCtrl', function($scope) {})
+.controller('MyCtrl', function($scope) {})
+.controller('MainNextCtrl', function($scope, Foods) {
+  $scope.foodmenus = Foods.cleardata();
 })
 .controller('MainCtrl', function($scope, Foods) {
   $scope.foodmenus = Foods.all();

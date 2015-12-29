@@ -10,6 +10,7 @@
 }
 .item{
 	padding: 0px;
+	min-height: 40px;
 }
 ion-tabs.tabs-color-active-positive .tab-item.tab-item-active{
 	color: #FF6600;
@@ -17,10 +18,19 @@ ion-tabs.tabs-color-active-positive .tab-item.tab-item-active{
 	vertical-align: text-bottom;
 }
 table{width: 100%;table-layout: fixed;}
-.classname,.foodpic,.checktd {text-align:center;vertical-align: middle;}
+.classname,.foodpic,.checktd,.totalbox {text-align:center;vertical-align: middle;}
 .classname{width:15%;min-width:10%;font-size: 16px;}
 .foodpic{width:50%;font-size: 14px;border-right:1px solid #ddd;padding: 5px}
 .foodpic > img{width:80%;}
 .check{font-size: 12px;color: #FF6600;display: block;padding: 5% 0;}
 .check > img{width: 13%;margin-bottom: -4px}
 .check > label{color: #000;}
+.totalbox{background-color: #eee;line-height: 40px;}
+.totalbox > span{float: right;padding-right: 20px;}
+.nextbox{line-height: 40px;}
+.nextlink{float: right;margin-right: 20px;}
+.lastlink{float: left;margin-left: 20px;}
+.nextbox a{color: #000;text-decoration:none;}
+.nextbox img{width: 16px;}
+
+.bar-stable .button.button-clear{display: none;}
